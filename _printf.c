@@ -12,7 +12,7 @@ int _printf(const char * const format, ...)
 		{"%i", printf_int}, {"%d", printf_dec}, {"%r", printf_rev},
 		{"%R", printf_rot13}, {"%b", printf_bin}, {"%u", printf_uns},
 		{"%o", printf_oc}, {"%x", printf_hx}, {"%X", printf_HX},
-		{"%S", printf_excl__str}, {"%p", printf_ptr}
+		{"%S", printf_excl_str}, {"%p", printf_ptr}
 	};
 
 	va_list ag;
@@ -28,7 +28,7 @@ Here:
 		z = 13;
 		while (z >= 0)
 		{
-			if (m[z].id[0] == format[x] && m[z].id[1] == format[x + 1])
+			if (m[z].wh[0] == format[x] && m[z].wh[1] == format[x + 1])
 			{
 				len += m[z].f(ag);
 				x = x + 2;

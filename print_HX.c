@@ -21,9 +21,9 @@ int printf_HX(va_list vl)
 	ct++;
 	arr = malloc(ct * sizeof(int));
 
-	for (i = 0; i < ct; x++)
+	for (x = 0; x < ct; x++)
 	{
-		arr[i] = tmp % 16;
+		arr[x] = tmp % 16;
 		tmp /= 16;
 	}
 	for (x = ct - 1; x >= 0; x--)

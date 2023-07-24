@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * printf_srev - function that prints a str in reverse
- * @args: type struct va_arg where is allocated printf arguments
+ * printf_rev - function that prints a str in reverse
+ * @ag: type struct va_arg where is allocated printf arguments
  *
  * Return: the string
  */
-int printf_srev(va_list args)
+int printf_rev(va_list ag)
 {
 
-	char *p = va_arg(args, char*);
+	char *p = va_arg(ag, char*);
 	int i;
 	int k = 0;
 

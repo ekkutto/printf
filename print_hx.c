@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * printf_hex - prints an hexgecimal number.
- * @val: arguments.
+ * printf_hex - prints an hexadecimal number.
+ * @vl: arguments.
  * Return: counter.
  */
-int printf_hex(va_list val)
+int printf_hex(va_list vl)
 {
-	int k;
+	int a;
 	int *array;
 	int counter = 0;
-	unsigned int num = va_arg(val, unsigned int);
+	unsigned int num = va_arg(vl, unsigned int);
 	unsigned int temp = num;
 
 	while (num / 16 != 0)
@@ -21,16 +21,16 @@ int printf_hex(va_list val)
 	counter++;
 	array = malloc(counter * sizeof(int));
 
-	for (k = 0; k < counter; k++)
+	for (a = 0; a < counter; a++)
 	{
-		array[k] = temp % 16;
+		array[a] = temp % 16;
 		temp /= 16;
 	}
-	for (k = counter - 1; k >= 0; k--)
+	for (a = counter - 1; i >= 0; i--)
 	{
-		if (array[k] > 9)
-			array[k] = array[k] + 39;
-		_putchar(array[k] + '0');
+		if (array[i] > 9)
+			array[i] = array[i] + 39;
+		_putchar(array[i] + '0');
 	}
 	free(array);
 	return (counter);

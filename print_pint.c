@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * printf_pointer - prints an hexgecimal number.
- * @val: arguments.
+ * printf_ptr - prints an hexadecimal number.
+ * @vl: arguments.
  * Return: counter.
  */
-int printf_pointer(va_list val)
+int printf_ptr(va_list vl)
 {
 	void *k;
 	char *j = "(nil)";
@@ -13,12 +13,12 @@ int printf_pointer(va_list val)
 	int c;
 	int i;
 
-	k = va_arg(val, void*);
+	k = va_arg(vl, void*);
 	if (k == NULL)
 	{
 		for (i = 0; j[i] != '\0'; i++)
 		{
-			_putchar(s[i]);
+			_putchar(j[i]);
 		}
 		return (i);
 	}
@@ -26,6 +26,6 @@ int printf_pointer(va_list val)
 	b = (unsigned long int)k;
 	_putchar('0');
 	_putchar('x');
-	c = printf_hex_aux(b);
+	c = printf_h_ax(b);
 	return (c + 2);
 }
